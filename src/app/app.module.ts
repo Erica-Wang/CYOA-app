@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { QuestionComponent } from './question/question.component';
 import { FinalComponent } from './final/final.component';
 import { GenderComponent } from './gender/gender.component';
+import { InitialComponent } from './initial/initial.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { InitialComponent } from './initial/initial.component';
 
 @NgModule({
   declarations: [

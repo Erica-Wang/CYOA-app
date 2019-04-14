@@ -9,6 +9,8 @@ import { QuestionService } from '../question.service';
 })
 export class GenderComponent implements OnInit {
 
+	name = '';
+
 	constructor(private route: ActivatedRoute,
 							private router: Router,
 							private qs: QuestionService){}
@@ -21,6 +23,7 @@ export class GenderComponent implements OnInit {
 	}
 
   ngOnInit() {
+  	this.name = this.qs.name;
   }
 
 }

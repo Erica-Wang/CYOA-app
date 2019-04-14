@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { QuestionService } from '../question.service';
 
 @Component({
   selector: 'app-initial',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InitialComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private qs: QuestionService) { 
+  }
 
   ngOnInit() {
+  }
+
+  enter(name){
+  	this.qs.name = name;
+  	this.router.navigate(['gender']);
   }
 
 }

@@ -10,7 +10,7 @@ export class AppComponent {
 
 	constructor(private route: ActivatedRoute,
     private router: Router){
-    	this.router.navigate(['gender']);
+    	this.router.navigate(['initial']);
     }
 
 }

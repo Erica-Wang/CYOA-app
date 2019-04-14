@@ -31,11 +31,19 @@ export class QuestionComponent implements OnInit {
   }
 
   next(index){
-  	console.log('next');
-  	if(index!=this.endIndex[this.gender][this.questionID]){
-  		this.questionID++;
-  	}else{
-  		this.router.navigate(['final']);
+  	console.log('next',index,this.questionID);
+  	if(index==this.endIndex[this.gender][this.questionID]){
+      this.router.navigate(['final']);
+      console.log('a');
+      this.qs.questionID = this.questionID;
+  	}else if(this.questionID==8){
+      this.qs.questionID = 9;
+      this.router.navigate(['final']);
+      console.log('b');
+    }
+    else{
+      this.questionID++;
+      console.log('c');
   	}
   }
 
