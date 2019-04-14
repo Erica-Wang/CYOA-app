@@ -1,4 +1,22 @@
-<form>
-	<input type='text' #name>
-	<button (click)='enter(name.value)'>enter</button>
-</form>
+<div class="card">
+  <div class="card-body">
+
+		<form>
+			<div class="row">
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+				    <span class="input-group-text" id="inputGroup-sizing-default">Please enter username</span>
+				  </div>
+				  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" #name>
+				</div>
+			</div>
+
+			<br>
+
+				<div class="float-right">
+					<button (click)='enter(name.value)' class="btn btn-info">Enter</button>
+				</div>
+		</form>
+
+	</div>
+</div>

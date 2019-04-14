@@ -10,11 +10,11 @@ let historyModel = models.history;
 let resultModel = models.result;
 
 resultRoutes.route('/').get(function (req,res){
-	historyModel.find(function (err, histories){
+	resultModel.find(function (err, results){
 		if(err){
 			console.log(err);
 		}else{
-			res.json(histories);
+			res.json(results);
 		}
 	});
 });
@@ -29,7 +29,10 @@ resultRoutes.route('/finish').post(function (req,res){
 			res.status(400);
 		});
 
+	console.log(thisHistory);
+
 	if(req.body.is_alive){
+		console.log('ALIVE');
 		resultModel.findOne({'gender': req.body.gender}, function(err,result){
 			if(!result){
 				let thisResult = new resultModel({

@@ -1,5 +1,16 @@
-<p>
-  {{results[gender][questionID]}}
-</p>
+<div class="card">
+  <div class="card-body">
 
-<a (click)='back()'>do again</a>
+		<h4>
+		  {{results[gender][questionID]}}
+		</h4>
+
+		<br>
+
+		<div class="row">
+			<div class="col">
+				<button (click)='back()' class="btn btn-info">Try again</button>
+			</div>
+		</div>
+	</div>
+</div>

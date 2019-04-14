@@ -1,6 +1,16 @@
-<p>
-  Question: {{questions[gender][questionID]}}
-</p>
-<a (click)='next(0)'>{{choices[gender][0][questionID]}}   </a>
-<a (click)='next(1)'>{{choices[gender][1][questionID]}}</a>
-
+<div class="card">
+  <div class="card-body">
+		<h4>
+		  Question: {{questions[gender][questionID]}}
+		</h4>
+		<br>
+		<div class="row">
+			<div class="col">
+				<button (click)='next(0)' class="btn btn-info">{{choices[gender][0][questionID]}}</button>
+			</div>
+			<div class="col">
+				<button (click)='next(1)' class="btn btn-info">{{choices[gender][1][questionID]}}</button>
+			</div>
+		</div>
+	</div>
+</div>

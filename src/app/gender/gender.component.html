@@ -1,13 +1,33 @@
-<p>Hi {{name}}</p>
+<div class="card">
+  <div class="card-body">
 
-<nav class="navbar navbar-expand-sm bg-light">
-  <div class="container-fluid">
-    <ul class="navbar-nav">
-      <button (click)="toQuestion(0)">Boy</button>
-      <button (click)="toQuestion(1)">Girl</button>
-    </ul>
+
+  	<div class="row">
+			<h4 class="col">Hi {{name}}, please choose an adventure.</h4>
+		</div>
+
+		<br>
+		
+		<div class="row">
+			<div class="col">
+		  	<button (click)="toQuestion(0)" class="btn btn-info">Boy</button>
+			</div>
+			<div class="col">
+			  <button (click)="toQuestion(1)" class="btn btn-info">Girl</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+		  	<p>You are a 12-year-old boy living in Sierra Leone. You love rap music and are currently preparing for the next big talent show. One day, when you are on your way home with a few friends...</p>
+			</div>
+			<div class="col">
+			  <p>You are a 12-year-old girl living in a village in Sierra Leone. You know the rebels are raiding the country but they never seemed like more than a distant worry. One day, as you are returning to the village after bringing home a container of water...</p>
+			</div>
+		</div>
+
   </div>
-</nav>
+</div>
 
 <div class="container">
   <router-outlet></router-outlet>
