@@ -25,7 +25,6 @@ export class FinalComponent implements OnInit {
   }
 
   back(){
-  	this.qs.back();
   	this.router.navigate(['gender']);
   }
 
