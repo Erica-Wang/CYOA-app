@@ -17,8 +17,8 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use('/engisp', resultRoutes);
 
-app.use(express.static(__dirname + '/dist/engisp'));
-
+app.use(express.static(__dirname + '../dist/engisp'));
+console.log(_dirname);
 app.get('/*', function(req,res) {
     
 res.sendFile(path.join(__dirname+'/dist/engisp/index.html'));
