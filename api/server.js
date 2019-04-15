@@ -2,18 +2,15 @@ const express = require('express'),
     path = require('path'),
     bodyParser = require('body-parser'),
     cors = require('cors'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+    dotenv = require('dotenv');
 
 const resultRoutes = require('./result.routes');
 
-const aws = require('aws-sdk');
-
-let s3 = new aws.S3({
-  mongodb_uri: process.env.MONGODB_URI
-});
+require('dotenv').config();
 
 mongoose.Promise = global.Promise;
-mongoose.connect(s3.mongodb_uri, { useNewUrlParser: true }).then(
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
   () => {console.log('Database is connected') },
   err => { console.log('Can not connect to the database'+ err)}
 );
