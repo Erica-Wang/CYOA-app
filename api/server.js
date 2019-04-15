@@ -6,8 +6,14 @@ const express = require('express'),
 
 const resultRoutes = require('./result.routes');
 
+const aws = require('aws-sdk');
+
+let s3 = new aws.S3({
+  mongodb_uri: process.env.MONGODB_URI
+});
+
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/engisp', { useNewUrlParser: true }).then(
+mongoose.connect(s3.mongodb_uri, { useNewUrlParser: true }).then(
   () => {console.log('Database is connected') },
   err => { console.log('Can not connect to the database'+ err)}
 );
