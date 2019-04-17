@@ -10,13 +10,20 @@ const resultRoutes = require('./result.routes');
 require('dotenv').config();
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
-  () => {console.log('Database is connected') },
-  err => { console.log('Can not connect to the database'+ err)}
-);
+
+mongoose.connect(process.env.MONGODB_URI);
+
+mongoose.connection.on('error', function(error) {
+  console.error('Database connection error:', error);
+});
+
+mongoose.connection.once('open', function() {
+  console.log('Database connected');
+});
 
 const app = express();
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded())
 app.use(cors());
 app.use('/engisp', resultRoutes);
 

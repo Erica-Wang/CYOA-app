@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "build": "heroku config:get MONGODB_URI -s  >> api/.env",
     "start": "node api/server.js",
     "build": "ng build",
     "test": "ng test",
@@ -71,6 +72,7 @@
   "homepage": "https://github.com/Erica-Wang/ChooseYourOwnAdventure#readme",
   "engines": {
     "node": "10.6.0",
-    "npm": "6.9.0"
+    "npm": "6.9.0",
+    "mongo": "4.0.3"
   }
 }

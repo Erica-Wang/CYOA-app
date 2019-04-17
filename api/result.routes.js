@@ -10,6 +10,7 @@ let historyModel = models.history;
 let resultModel = models.result;
 
 resultRoutes.route('/').get(function (req,res){
+	console.log('get');
 	resultModel.find(function (err, results){
 		if(err){
 			console.log(err);
@@ -29,7 +30,6 @@ resultRoutes.route('/finish').post(function (req,res){
 			res.status(400);
 		});
 
-	console.log(thisHistory);
 
 	if(req.body.is_alive){
 		console.log('ALIVE');
