@@ -6,7 +6,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class QuestionService {
 
-	uri = "http://localhost:4000/engisp";
+	uri = "https://cyoa-api.herokuapp.com";
 
   name = "";
 	questionID = -1;
