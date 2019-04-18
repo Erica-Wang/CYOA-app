@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "heroku config:get MONGODB_URI -s  >> api/.env",
-    "start": "node api/server.js",
     "build": "ng build",
+    "start": "node api/server.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
