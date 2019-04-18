@@ -32,7 +32,7 @@ export class QuestionService {
         "A boy soldier about your age uses a machete to cut off both your hands and left you to die on the ground. You wake up hungry, weak, and most importantly, lost as to where the hospital is. After a few hours of walking, you see a man in uniform nearby. What do you do?",
         "Luckily, he is not a rebel. You receive direction to the nearest hospital and proceed towards that direction. When you ask for assistance at a village near the hospital, two women harshly tells you to get lost, thinking you are rebels' bait. What do you do?",
         "You faint and wake up to the two women helping you towards the hospital. After medical treatment, you get sent to the amputees' camp in Freetown. You soon learn that you are pregnant with a child of a rapist. You hate the unborn child but the only abortion option is extremely unsafe. What do you do?",
-        "The food portion decreases again after you give birth. Both you and your baby is starving. When your uncle brings over the last portion of rice, who should eat it?",
+        "The food portion decreases again after you give birth. Both you and your baby are starving. When your uncle brings over the last portion of rice, who should eat it?",
         "Your child dies of malnutrition a few days later which becomes a permanent trauma. Some children in the amputees' camp began begging for additional money but you find it distasteful. Do you join them?",
         "While begging, you meet a news reporter who provides you with an opportunity to travel to Canada. You think your friend may be more qualified for the requirements. Do you tell her?"
       ]
@@ -121,7 +121,7 @@ export class QuestionService {
         "A few days later, you die of malnutrition with you child in your arms.",
         "You become weaker everyday as food portions drop. Before you find another relative who could support you, you die of malnutrition.",
         "Your friend qualifies for the opportunity and soon leaves Sierra Leone on a flight. You eventually get released from the camp with your friends and go on another journey to find a means of survival.",
-        "You soon confirm to travel to Canada and there, you will receive a formal education."
+        "You soon confirm to travel to Canada and there, you will receive a formal education... THE END"
       ]
     ];
 
