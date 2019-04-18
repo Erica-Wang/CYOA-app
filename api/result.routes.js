@@ -11,11 +11,22 @@ let resultModel = models.result;
 
 resultRoutes.route('/').get(function (req,res){
 	console.log('get');
+	var info = [];
 	resultModel.find(function (err, results){
 		if(err){
 			console.log(err);
 		}else{
-			res.json(results);
+			info[0]=results;
+			console.log(info[0]);
+		}
+	});
+	historyModel.find(function (err, histories){
+		if(err){
+			console.log(err);
+		}else{
+			info[1]=histories;
+			console.log(Object.assign(info[1],info[0]));
+			res.json(Object.assign(info[0],info[1]));
 		}
 	});
 });
